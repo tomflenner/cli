@@ -63,7 +63,7 @@ func ParseFlagType(typeStr string) (FlagType, error) {
 	switch typeStr {
 	case "integer", "Integer":
 		return IntType, nil
-	case "float", "Float", "Number":
+	case "float", "Float", "number", "Number":
 		return FloatType, nil
 	case "boolean", "bool", "Boolean":
 		return BoolType, nil

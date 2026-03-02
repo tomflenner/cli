@@ -20,11 +20,11 @@ components:
       bearerFormat: JWT
   schemas:
     FlagDefaultValue:
-      description: Default value for a flag (can be boolean, string, integer, or object)
+      description: Default value for a flag (can be boolean, string, number, or object)
       oneOf:
         - type: boolean
         - type: string
-        - type: integer
+        - type: number
         - type: object
     ManifestFlag:
       type: object
@@ -44,7 +44,7 @@ components:
         type:
           type: string
           description: Flag data type.
-          enum: [boolean, string, integer, object]
+          enum: [boolean, string, number, object]
         description:
           type: string
           nullable: true
@@ -228,7 +228,7 @@ paths:
                   example: search-rollout
                 type:
                   type: string
-                  enum: [boolean, string, integer, object]
+                  enum: [boolean, string, number, object]
                 name:
                   type: string
                   description: Optional display name. Defaults to the key.
@@ -353,7 +353,7 @@ paths:
                   example: search-rollout
                 type:
                   type: string
-                  enum: [boolean, string, integer, object]
+                  enum: [boolean, string, number, object]
                 name:
                   type: string
                   example: Search rollout
